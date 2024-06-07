@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
 import project from '../package.json';
-// import * as appRoutes from '@/infra/routes';
+import * as appRoutes from '@/infra/routes';
 
 const routes = Router();
 
@@ -11,7 +11,7 @@ routes.get('/', (request: Request, response: Response) => {
 	});
 });
 
-// routes.use(Object.values(appRoutes))
+routes.use(Object.values(appRoutes))
 
 
 export { routes }
